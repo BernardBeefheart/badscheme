@@ -60,7 +60,7 @@ typedef struct {
 	bsinterp_type type;
 	char *str;
 } bsobject;
-static bslist *programm = NULL;
+
 
 void interp_string(char *str) {
 	bsinterp_state state = bsst_none;
@@ -100,9 +100,9 @@ void interp_string(char *str) {
 				new_state = bsst_none;
 				break;
 		}
-	}
-	if (state != new_state) {
+        if (state != new_state) {
 
+        }
 	}
 	LEAVE_FUNC();
 }
