@@ -37,7 +37,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "version.h"
+#include "bsversion.h"
 
 char *progname = "badscheme";
 char *version = "1.0.0";

@@ -46,12 +46,12 @@
 #define LEAVE_FUNC()	fprintf(stdout, "Leave %s\n", __func__)
 
 #include "bstypes.h"
-#include "bs-errors.h"
+#include "bserrors.h"
 #include "bslist.h"
 #include "bsfiles-utils.h"
 #include "bsfile.h"
 #include "bsprogramm.h"
-#include "interp.h"
+#include "bsinterp.h"
 
 #endif	/* BADSCHEME_H */
 

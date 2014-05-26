@@ -37,10 +37,6 @@
 #ifndef BSFILES_UTILS_H
 #    define	BSFILES_UTILS_H
 
-#include "bstypes.h"
-#include "bs-errors.h"
-
-
 bschar *get_file_content(const char *file_name);
 
 #endif	/* BSFILES_UTILS_H */

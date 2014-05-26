@@ -67,9 +67,6 @@ void interp_string(char *str) {
 	bsinterp_state new_state;
 	char c;
 	ENTER_FUNC();
-	if (programm == NULL) {
-		programm = new_list();
-	}
 	while ((c = *(str++)) != 0) {
 		switch (c) {
 			case '(':
