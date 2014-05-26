@@ -1,1 +1,7 @@
+*.o
+*.exe
+*~
 *.d
+.dep.inc
+.*.swp
+*.stackdump
