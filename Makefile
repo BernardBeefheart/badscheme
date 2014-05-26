@@ -7,26 +7,36 @@
 #     all                      build all configurations
 #     help                     print help mesage
 #
+#		@todo : rewrite text above, comming from Netbeans Makefile
+#
 
 CC = gcc
 LD = gcc
 
 ODIR = objs
 
-SOURCES = $(wildcard src/*.c)
 
-STD_WARNINGS = -Wall -Wextra -pedantic  -std=gnu99
+STD_WARNINGS = -Wall -Wextra -pedantic -std=gnu99
 STD_INCLUDES = -Iinclude
 
+_os = $(shell uname)
+ifeq ($(OS), Windows_NT)
+	_exe = .exe
+else
+	_exe =
+endif
+
+SOURCES = $(wildcard src/*.c)
 _OBJS = $(patsubst %.c,%.o,$(notdir $(SOURCES)))
 OBJS = $(addprefix $(ODIR)/, $(_OBJS))
 
-EXE = badscheme.exe
+EXE = badscheme$(_exe)
 
 $(ODIR)/%.o: src/%.c
 	$(CC) $(STD_INCLUDES) $(STD_WARNIGS) -c $< -o $@
 
 all: _odir $(EXE)
+	@echo "_os $(_os) OS $(OS) EXE $(EXE)"
 
 clean:
 	rm -fv $(OBJS) $(EXE)

@@ -44,8 +44,12 @@
 
 #include "badscheme.h"
 
-static void dohelp(const int exit_code) {
-	fprintf(stdout, "badscheme [--help] file1 file2 ...\n");
+static void banner(void) {
+    fprintf(stdout, ";; %s %s\n", progname, version);
+}
+
+_Noreturn static void dohelp(const int exit_code) {
+	fprintf(stdout, "%s [--help] file1 file2 ...\n", progname);
 	exit(exit_code);
 }
 
@@ -56,7 +60,7 @@ int main(int argc, char** argv) {
 	int i;
 	bslist *files = new_list();
 
-
+    banner();
 	if (argc == 1) {
 		dohelp(EXIT_SUCCESS);
 	} else {

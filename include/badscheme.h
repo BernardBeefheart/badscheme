@@ -52,6 +52,7 @@
 #include "bsfile.h"
 #include "bsprogramm.h"
 #include "bsinterp.h"
+#include "bsversion.h"
 
 #endif	/* BADSCHEME_H */
 
